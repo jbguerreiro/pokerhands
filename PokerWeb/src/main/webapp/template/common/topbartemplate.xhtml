@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:f="http://java.sun.com/jsf/core">
+
+
+<f:view locale="#{sessionMB.locale}">
+	<h:head>
+		<meta charset="utf-8" />
+		<title>Poker - Web Portal</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/x-icon" href="/DooWeb/resource/images/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="/DooWeb/resource/css/style.css" />
+
+		<ui:insert name="imports"></ui:insert>
+	</h:head>
+
+
+
+	<h:body>
+
+		<h:form id="dashForm" name="dashForm" method="post" styleClass="blockform">
+			<div class="topbar">
+			</div>
+			<!-- Loading Objects Icon-->
+			<p:dialog modal="true" widgetVar="statusDialog" draggable="false" closable="false" resizable="false" style="background: white !important;">
+				<p:graphicImage value="/resource/images/loading.gif" style="vertical-align: middle;" />
+			</p:dialog>
+
+			<p:dialog modal="true" widgetVar="aboutDialog" draggable="false" closable="true" resizable="false" style="background: white !important;" header="#{msg['about']}">
+				<h:outputText value="#{msg['about.description']}" />
+				<br />
+				<br />
+				<p:layout style="min-width:350px;min-height:200px;">
+					<p:layoutUnit position="center" style="text-align: left;">
+						<h:outputText value="#{msg['version.label']}: " />
+						<h:outputText value="#{versionBean.deployVersion}" />
+						<br />
+						<h:outputText value="#{msg['build.number.label']}: " />
+						<h:outputText value="#{versionBean.buildNumber}" />
+						<br />
+						<h:outputText value="#{msg['default.date']}: " />
+						<h:outputText value="#{versionBean.buildTimestamp}" />
+					</p:layoutUnit>
+					<p:layoutUnit position="south" style="border: 0; background-color: white; background-image: none;">
+						<h:outputText value="#{msg['about.copyright']}" />
+					</p:layoutUnit>
+				</p:layout>
+				
+			</p:dialog>
+
+		</h:form>
+
+		<div id="content">
+			<ui:insert name="content">CONTENT</ui:insert>
+		</div>
+	</h:body>
+</f:view>
+</html>

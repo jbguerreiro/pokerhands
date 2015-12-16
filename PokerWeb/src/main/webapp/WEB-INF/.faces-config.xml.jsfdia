@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:*" PATH="*" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:*:0" NAME="item" PATH="*" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="doodoc::#doodoc#nfcemain.xhtml"
+    NAME="output" PATH="/doodoc/nfcemain.xhtml"
+    TARGET="rules:#doodoc#nfcemain.xhtml" TITLE="doodoc" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="nfcecontingence::#doodoc#nfcecontingence.xhtml" NAME="output1"
+    PATH="/doodoc/nfcecontingence.xhtml"
+    TARGET="rules:#doodoc#nfcecontingence.xhtml" TITLE="nfcecontingence" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="dash::#pages#dash.xhtml" NAME="output2"
+    PATH="/pages/dash.xhtml" TARGET="rules:#pages#dash.xhtml"
+    TITLE="dash" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="notallowed::#pages#notallowed.xhtml"
+    NAME="output3" PATH="/pages/notallowed.xhtml"
+    TARGET="rules:#pages#notallowed.xhtml" TITLE="notallowed" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="doocalc::#doocalc#doocalc.xhtml"
+    NAME="output4" PATH="/doocalc/doocalc.xhtml"
+    TARGET="rules:#doocalc#doocalc.xhtml" TITLE="doocalc" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="doolivery::#doolivery#doolivery.xhtml"
+    NAME="output5" PATH="/doolivery/doolivery.xhtml"
+    TARGET="rules:#doolivery#doolivery.xhtml" TITLE="doolivery" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="permissionmanagement::#security#permissionmanagement.xhtml"
+    NAME="output6" PATH="/security/permissionmanagement.xhtml"
+    TARGET="rules:#security#permissionmanagement.xhtml"
+    TITLE="permissionmanagement" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="companymanagement::#company#companymanagement.xhtml"
+    NAME="output7" PATH="/company/companymanagement.xhtml"
+    TARGET="rules:#company#companymanagement.xhtml"
+    TITLE="companymanagement" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="custommessage::#pages#custommessage.xhtml"
+    NAME="output8" PATH="/pages/custommessage.xhtml"
+    TARGET="rules:#pages#custommessage.xhtml" TITLE="custommessage" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="custommessagebasic::#custommessagebasic.xhtml" NAME="output9"
+    PATH="/custommessagebasic.xhtml"
+    TARGET="rules:#custommessagebasic.xhtml" TITLE="custommessagebasic" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="licensing::#licensing#licensing.xhtml"
+    NAME="output10" PATH="/licensing/licensing.xhtml"
+    TARGET="rules:#licensing#licensing.xhtml" TITLE="licensing" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="systemservices::#systemservices#systemservices.xhtml"
+    NAME="output11" PATH="/systemservices/systemservices.xhtml"
+    TARGET="rules:#systemservices#systemservices.xhtml"
+    TITLE="systemservices" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="configurenotificationservices::#systemservices#configurenotificationservices.xhtml"
+    NAME="output22"
+    PATH="/systemservices/configurenotificationservices.xhtml"
+    TARGET="rules:#systemservices#configurenotificationservices.xhtml"
+    TITLE="configurenotificationservices" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="configureselectednotification::#systemservices#configureselectednotification.xhtml"
+    NAME="output12"
+    PATH="/systemservices/configureselectednotification.xhtml"
+    TARGET="rules:#systemservices#configureselectednotification.xhtml"
+    TITLE="configureselectednotification" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="configurelocaldir::#systemservices#configurelocaldir.xhtml"
+    NAME="output13" PATH="/systemservices/configurelocaldir.xhtml"
+    TARGET="rules:#systemservices#configurelocaldir.xhtml"
+    TITLE="configurelocaldir" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="configureftpserver::#systemservices#configureftpserver.xhtml"
+    NAME="output14" PATH="/systemservices/configureftpserver.xhtml"
+    TARGET="rules:#systemservices#configureftpserver.xhtml"
+    TITLE="configureftpserver" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="configureemail::#systemservices#configureemail.xhtml"
+    NAME="output15" PATH="/systemservices/configureemail.xhtml"
+    TARGET="rules:#systemservices#configureemail.xhtml"
+    TITLE="configureemail" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="repositorylist::#repository#repositorylist.xhtml"
+    NAME="output16" PATH="/repository/repositorylist.xhtml"
+    TARGET="rules:#repository#repositorylist.xhtml"
+    TITLE="repositorylist" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="repositorylistcte::#repository#repositorylistcte.xhtml"
+    NAME="output17" PATH="/repository/repositorylistcte.xhtml"
+    TARGET="rules:#repository#repositorylistcte.xhtml"
+    TITLE="repositorylistcte" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="nferep::#repository#nferep.xhtml"
+    NAME="output18" PATH="/repository/nferep.xhtml"
+    TARGET="rules:#repository#nferep.xhtml" TITLE="nferep" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="cterep::#repository#cterep.xhtml"
+    NAME="output19" PATH="/repository/cterep.xhtml"
+    TARGET="rules:#repository#cterep.xhtml" TITLE="cterep" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="repositoryupload::#repository#repositoryupload.xhtml"
+    NAME="output20" PATH="/repository/repositoryupload.xhtml"
+    TARGET="rules:#repository#repositoryupload.xhtml"
+    TITLE="repositoryupload" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="manifestlist::#manifest#manifestlist.xhtml"
+    NAME="output21" PATH="/manifest/manifestlist.xhtml"
+    TARGET="rules:#manifest#manifestlist.xhtml" TITLE="manifestlist" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="manifestconciliationfile::#manifest#manifestconciliation.xhtml"
+    NAME="output23" PATH="/manifest/manifestconciliation.xhtml"
+    TARGET="rules:#manifest#manifestconciliation.xhtml"
+    TITLE="manifestconciliationfile" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="messages::#messages#messages.xhtml"
+    NAME="output24" PATH="/messages/messages.xhtml"
+    TARGET="rules:#messages#messages.xhtml" TITLE="messages" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#login.xhtml" PATH="/login.xhtml"
+  SHAPE="32,1313,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#login.xhtml:0" NAME="item"
+   PATH="/login.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="login::#login.xhtml" NAME="output"
+    PATH="/login.xhtml" TARGET="rules:#login.xhtml" TITLE="login" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="firstaccess::#firstaccess#firstaccess.xhtml"
+    NAME="output1" PATH="/firstaccess/firstaccess.xhtml"
+    TARGET="rules:#firstaccess#firstaccess.xhtml" TITLE="firstaccess" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#security#permissionmanagement.xhtml"
+  PATH="/security/permissionmanagement.xhtml" SHAPE="304,961,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#security#permissionmanagement.xhtml:0"
+   NAME="item" PATH="/security/permissionmanagement.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="role::#security#role.xhtml" NAME="output"
+    PATH="/security/role.xhtml" TARGET="rules:#security#role.xhtml"
+    TITLE="role" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="user::#security#user.xhtml" NAME="output1"
+    PATH="/security/user.xhtml" TARGET="rules:#security#user.xhtml"
+    TITLE="user" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#security#user.xhtml"
+  PATH="/security/user.xhtml" SHAPE="528,1089,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#doodoc#nfcecontingence.xhtml"
+  PATH="/doodoc/nfcecontingence.xhtml" SHAPE="304,401,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#doolivery#doolivery.xhtml"
+  PATH="/doolivery/doolivery.xhtml" SHAPE="304,849,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#pages#dash.xhtml" PATH="/pages/dash.xhtml"
+  SHAPE="304,513,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#firstaccess#firstaccess.xhtml"
+  PATH="/firstaccess/firstaccess.xhtml" SHAPE="256,1329,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#pages#custommessage.xhtml"
+  PATH="/pages/custommessage.xhtml" SHAPE="304,1105,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#security#role.xhtml"
+  PATH="/security/role.xhtml" SHAPE="528,945,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#doodoc#nfcemain.xhtml"
+  PATH="/doodoc/nfcemain.xhtml" SHAPE="304,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#custommessagebasic.xhtml"
+  PATH="/custommessagebasic.xhtml" SHAPE="304,1217,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#pages#notallowed.xhtml"
+  PATH="/pages/notallowed.xhtml" SHAPE="304,625,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#doocalc#doocalc.xhtml"
+  PATH="/doocalc/doocalc.xhtml" SHAPE="304,737,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#company#companymanagement.xhtml"
+  PATH="/company/companymanagement.xhtml" SHAPE="304,401,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#company#companymanagement.xhtml:0"
+   NAME="item" PATH="/company/companymanagement.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="company::#company#company.xhtml"
+    NAME="output" PATH="/company/company.xhtml"
+    TARGET="rules:#company#company.xhtml" TITLE="company" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#company#company.xhtml"
+  PATH="/company/company.xhtml" SHAPE="528,641,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#systemservices#systemservices.xhtml"
+  PATH="/systemservices/systemservices.xhtml" SHAPE="304,497,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#systemservices#configurelocaldir.xhtml"
+  PATH="/systemservices/configurelocaldir.xhtml" SHAPE="304,593,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#systemservices#configureemail.xhtml"
+  PATH="/systemservices/configureemail.xhtml" SHAPE="304,1889,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#systemservices#configureftpserver.xhtml"
+  PATH="/systemservices/configureftpserver.xhtml" SHAPE="304,705,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#repository#repositorylist.xhtml"
+  PATH="/repository/repositorylist.xhtml" SHAPE="304,657,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#repository#repositoryupload.xhtml"
+  PATH="/repository/repositoryupload.xhtml" SHAPE="304,657,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manifest#manifestlist.xhtml"
+  PATH="/manifest/manifestlist.xhtml" SHAPE="304,753,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#repository#nferep.xhtml"
+  PATH="/repository/nferep.xhtml" SHAPE="304,833,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#licensing#licensing.xhtml"
+  PATH="/licensing/licensing.xhtml" SHAPE="304,721,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#repository#repositorylistcte.xhtml"
+  PATH="/repository/repositorylistcte.xhtml" SHAPE="304,753,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#repository#cterep.xhtml"
+  PATH="/repository/cterep.xhtml" SHAPE="304,753,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manifest#manifestconciliation.xhtml"
+  PATH="/manifest/manifestconciliation.xhtml" SHAPE="304,817,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM
+  NAME="rules:#systemservices#configurenotificationservices.xhtml"
+  PATH="/systemservices/configurenotificationservices.xhtml"
+  SHAPE="304,849,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM
+  NAME="rules:#systemservices#configureselectednotification.xhtml"
+  PATH="/systemservices/configureselectednotification.xhtml"
+  SHAPE="304,849,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#messages#messages.xhtml"
+  PATH="/messages/messages.xhtml" SHAPE="304,913,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

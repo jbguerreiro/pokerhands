@@ -1,0 +1,10 @@
+package poker.hands.system;
+
+public class Version {
+
+	public static final String DEPLOY_VERSION = "@deploy.version@";
+
+	public static final String BUILD_NUMBER = "@build.number@";
+	
+	public static final String BUILD_TIMESTAMP = "@build.timestamp@";
+}

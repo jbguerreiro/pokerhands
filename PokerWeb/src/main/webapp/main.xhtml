@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+	 
+    <h:head>
+		<meta charset="utf-8"/>
+		<title><h:outputText value="#{msg['default.title']}"/>-<h:outputText value="#{msg['default.welcome']}"/></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/x-icon" href="/PokerWeb/resource/images/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="/PokerWeb/resource/css/style.css" />
+		<h:outputScript library="primefaces" name="jquery/jquery.js" target="head" />
+		<script src="/PokerWeb/resource/js/jquery.validate.min.js"></script>
+		<script src="/PokerWeb/resource/js/form-validation.js"></script> 
+		<script src="/PokerWeb/resource/js/cors.js"></script>
+    </h:head>
+ 
+    <h:body styleClass="page-login">
+    
+	    <div class="topbar">
+			<div class="container"/>
+		</div>
+		
+		<div >
+			<div class="container">
+				<div class="logo-container">
+					<img src="/PokerWeb/resource/images/poker_logo.png" />
+				</div>
+				<br/>
+				<h:form id="players" name="loginForm" method="post" >
+				<p:growl id="growl" showDetail="true"/> 
+				<div>
+					<h2><h:outputText value="#{msg['default.language']}"/></h2> 
+				
+					<h:selectOneMenu value="#{languageMB.language}"  onchange="submit();" valueChangeListener="#{languageMB.countryLocaleCodeChanged}">
+			   			<f:selectItems value="#{languageMB.countriesInMap}" /> 
+			   		</h:selectOneMenu>
+				</div>
+				<br/>
+				<div class="permissionsText mk-form" id="form1">
+					<h2><h:outputText value="#{msg['default.player']} 1"/></h2>
+										
+						<div class="form-group">
+							<img src="/PokerWeb/resource/images/icon-login-user.png" width="44" height="44" alt="#{msg['default.name']}" />
+							 <h:inputText id="username_A" name="username_p1" value="#{defaultMB.username_p1}"   alt="#{msg['default.name']}"  />
+						</div>
+						<div class="form-group">
+							<img src="/PokerWeb/resource/images/icon-login-pass.png" width="44" height="44" />
+							<h:inputText id="cards_A" name="cards_p1" value="#{defaultMB.cards_p1}" class="form-control"  />							
+						</div>
+				</div>
+				
+				<div class="permissionsText mk-form" id="form2">
+					<h2><h:outputText value="#{msg['default.player']} 2"/></h2>
+						<div class="form-group">
+							<img src="/PokerWeb/resource/images/icon-login-user.png" width="44" height="44" />
+							 <h:inputText id="username_B" name="username_p2" value="#{defaultMB.username_p2}"  alt="#{msg['default.name']}" />
+							  
+						</div>
+						<div class="form-group">
+							<img src="/PokerWeb/resource/images/icon-login-pass.png" width="44" height="44" />
+							<h:inputText id="cards_B" name="cards_p2" value="#{defaultMB.cards_p2}" class="form-control" />
+						</div>									
+				</div>	
+				<br/>
+				<div>
+					<h:commandButton action="#{defaultMB.generateCards}" id="generate" value="#{msg['default.generate']}" class="btn"  />
+					<h:outputText value="&nbsp;&nbsp;&nbsp;"/>
+					<h:commandButton action="#{defaultMB.startGame}" id="buttonPlay" value="#{msg['default.play']}" class="btn"  />
+				</div>
+				</h:form>			
+			</div>
+			<img class="main-bottom" src="/PokerWeb/resource/images/main-bottom.png" />
+		</div>
+		
+	
+	</h:body>
+</html>
+ 

@@ -1,0 +1,2619 @@
+@font-face {
+		font-family: 'titillium';
+		src: url('/PokerWeb/resource/fonts/titillium-webfont.eot');
+		src: url('/PokerWeb/resource/fonts/titillium-webfont.eot?#iefix') format('embedded-opentype'),
+				 url('/PokerWeb/resource/fonts/titillium-webfont.woff') format('woff'),
+				 url('/PokerWeb/resource/fonts/titillium-webfont.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	list-style: none;
+	vertical-align: baseline;
+	text-decoration: none;
+}
+
+body {
+	background-color: #fff;
+	text-align: center;
+	font-family: 'titillium';
+}
+
+.red {
+    background-color: #FFCCCC !important;
+}
+
+.green {
+    background-color: #CCFFCC!important;
+}
+
+.yellow {
+    background-color: #FFFFCC!important;
+}
+
+.orange {
+    background-color: #FBDF99!important;
+}
+
+form {
+	display: inline-block;
+}
+
+.blockform {
+	display: block !important;
+}
+
+.text-center {
+	text-align: center;
+}
+.float-left {
+	float: left;
+}
+.float-right {
+	float: right;
+}
+.hide {
+	display: none;
+}
+
+.container {
+	width: 100%;
+	/*width: 80%; comentado pelo merge 01/09/2014*/
+	position: relative;
+	text-align: left;
+	padding-left: 2%;
+	padding-right: 2%;
+	height:50%;
+}
+
+form#nfceListForm {
+	width: 95%;
+}
+
+.page-components .container {
+	margin-bottom: 50px;
+}
+a,
+button,
+.btn {
+	-webkit-transition: all .2s ease-out;
+		 -moz-transition: all .2s ease-out;
+			-ms-transition: all .2s ease-out;
+			 -o-transition: all .2s ease-out;
+					transition: all .2s ease-out;
+}
+
+.topbar {
+	height: 50px;
+	width: 100%;
+	background-color: #231f20;
+	display: block;
+}
+.topbar .container 
+{
+	font-size: 14px;
+	padding: 0 20px;
+}
+.topbar .container .logo {
+	margin-top: 8px;
+	margin-left:0%;
+	border:0px;	
+}
+.topbar .container > div {
+	position: relative;
+	display: inline-block;
+	border-left: 1px solid #4d4d4d;
+}
+.topbar .container > div a {
+	display: block;
+	color: #fff;
+}
+.topbar .container > div > ul {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 51px;
+	width: 250px;
+	z-index: 999;
+	opacity: 0;
+	pointer-events: none;
+	border-top: 1px solid transparent;
+	-webkit-transition: all .2s ease-out;
+		 -moz-transition: all .2s ease-out;
+			-ms-transition: all .2s ease-out;
+			 -o-transition: all .2s ease-out;
+					transition: all .2s ease-out;
+}
+.topbar .container > div:hover ul {
+	opacity: 1;
+	pointer-events: auto;
+}
+.topbar .container > div ul li a {
+	display: block;
+	background-color: #fff;
+	color: #000;
+	padding: 10px 10px 10px 25px;
+	/*width: 210px;*/
+	margin-top:-5px;
+}
+.topbar .container > div > ul li:hover a {
+	background-color: #b6c931;
+	color: #231f20;
+}
+
+.topbar .container .empresa {
+	/*margin-left: 70px;
+	width: 120px;*/
+	margin-left:1%;
+	width: 13%;
+	background: url("/PokerWeb/resource/images/seta.png") right no-repeat;
+	top:-5px;
+}
+.topbar .container .empresa > a {
+	padding: 14px 15px 14px 20px;
+	font-size:15px;
+	white-space: nowrap;
+	/*white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	*/
+}
+.topbar .container .empresa img {
+	padding-left: 23px;
+}
+
+.topbar .container .estabelecimento {
+	/*width: 160px;*/
+	width:18%;
+	background: url("/PokerWeb/resource/images/seta.png") right no-repeat;
+	padding-left:8px;
+	margin-left: 2%;
+	/*margin-left:18px;*/
+	top:-5px;
+	width:21%;
+	
+}
+
+.topbar .container .estabelecimento > a {
+	padding: 14px 11px 14px 15px;
+	font-size:15px;
+	white-space: nowrap;
+}
+.topbar .container .estabelecimento img {
+	padding-left: 13px;
+}
+
+#search {
+	position: absolute;
+	display: inline-block;
+	height: 50px;
+	margin-top:5px;
+	border-left:0px;
+	width:22%;
+	margin-left:1%;	
+}
+#search input {
+	/*position: absolute;*/
+	width: 75%;
+	height: 28px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5%;
+	padding-right: 15%;	
+	border: 1px solid #bebebe;
+	font-size: 14px;
+	background: #FFFFFF;
+}
+#search a {
+	position: absolute;
+	display: inline-block;
+	top: 11px;
+	right: 20px;
+	width: 25px;
+	height: 25px;
+	background: transparent url(/PokerWeb/resource/images/icon-search.png) no-repeat;
+	z-index: 999;
+}
+
+.topbar .container .user-acc {
+	margin-left: 22%;
+	border: none;
+	width:12%;
+	background: url("/PokerWeb/resource/images/icon-user.png") 20px no-repeat;
+	top:-5px;
+}
+
+.seta{
+	
+}
+.topbar .container .user-acc .seta {
+	/*margin: 0 10px 0 19px;*/
+	margin-left:15%;
+	margin-top:-11px;
+}
+
+
+.topbar .container .user-acc > a {
+	padding: 14px 15px  14px 53px;
+	white-space: nowrap;
+}
+.topbar .container > div.user-acc > ul {
+	left: auto;
+	right: 0;
+}
+.topbar .container > div.user-acc > ul li:last-of-type {
+	border-top: 1px solid #4d4d4d;
+}
+.topbar .container > div.user-acc > ul li:last-of-type a {
+}
+.topbar .container .user-acc .icon-user {
+	position: absolute;
+	margin: 0 50px 0 -13px;
+}
+
+.topbar .container .alert {
+	height: 50px;
+	
+	top:-10px;
+}
+
+.alert {
+top: 2px;
+}
+
+.topbar .container .alert .icon-alert {
+	margin: 0 0 0 15px;
+	margin-bottom: -10px;
+	margin-top: 10px;	
+}
+
+.topbar .container .alert .icon-alert {
+	top:10px;
+}
+
+.container{
+	padding-top: -50px;
+}
+
+.topbar .container .alert div {
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	top: 5px;
+	right: -11px;
+	/*color: #fff;*/
+	color: #231f20;
+	font-weight: 600;
+	background: transparent url(/PokerWeb/resource/images/alert-circle.png) no-repeat;
+}
+.topbar .container .alert div span {
+	position: absolute;
+	margin: -2px 0 0 4px;
+}
+.topbar .container .config {
+	height: 55px;
+	margin-left: 1%;
+	padding-right: 1%;
+	width:4%;
+	/*border-right: 1px solid #4d4d4d;*/
+}
+.topbar .container .config .icon-config {
+	margin: 10px 0 0 10px;
+}
+
+.topbar .container > div.config > ul {
+	top: 53px;
+	left: -120px;
+}
+
+
+.main {
+	position: relative;
+	width: 100%;
+	min-width:100%;
+	height: 430px;
+	background: url(/PokerWeb/resource/images/bg.png) repeat;
+	-webkit-transition: all .6s;
+		 -moz-transition: all .6s;
+			-ms-transition: all .6s;
+			 -o-transition: all .6s;
+					transition: all .6s;
+}
+
+.page-permission .main {
+	padding-top: 1px;
+	height: 700px;
+}
+
+.page-company-management .main {
+	padding-top: 1px;
+	height: 627px;
+}
+
+.page-role .main {
+	padding-top: 1px;
+	height: 1050px;
+}
+
+.page-user .main {
+	padding-top: 1px;
+	height: 1050px;
+}
+
+.page-firstaccess .main {
+	padding-top: 1px;
+	height: auto;
+	padding-bottom: 50px;
+	min-height: 430px;
+}
+
+
+.page-login .main {
+	padding-top: 60px;
+	Width:100%;
+}
+.page-dash .main {
+	padding-top: 60px;
+	height: 510px;
+}
+.page-nota .main {
+	height: 220px;
+}
+.page-doodoc .main {
+	height: 300px;
+}
+.page-doodoc .main.filter-advanced{
+	height: 370px;
+}
+
+.page-company .main {
+	padding-top: 1px;
+	height: 1250px;
+}
+
+.main-bottom {
+ 	position: absolute;
+	bottom: -18px;
+	left: 110px;
+	background: url(/PokerWeb/resource/images/bg.png) repeat;
+}
+.page-nota .main-bottom,
+.page-doodoc .main-bottom {
+	bottom: auto;
+}
+.main .main-bottom.doodoc {
+	background: url(/PokerWeb/resource/images/bg-doodoc.png) repeat;
+}
+.main .main-bottom.doocalc {
+	background: url(/PokerWeb/resource/images/bg-doocalc.png) repeat;
+}
+.main .main-bottom.doolivery {
+	background: url(/PokerWeb/resource/images/bg-doolivery.png) repeat;
+}
+
+.separator {
+	/*background: url(/PokerWeb/resource/images/bg.png) repeat;*/
+	background-color: rgba(255,255,255,.6);
+	width: 100%;
+	height: 13px;
+	display: block;
+}
+.main .header {
+	width: 100%;
+	height: 100%;
+	padding-top: 15px;
+}
+
+.ui-button-text-only .ui-button-text{
+	margin-top: -5px !important;	
+}
+
+.main .header.doodoc {
+	background: url(/PokerWeb/resource/images/bg-doodoc.png) repeat;
+}
+.main .header.doocalc {
+	background: url(/PokerWeb/resource/images/bg-doocalc.png) repeat;
+}
+.main .header.doolivery {
+	background: url(/PokerWeb/resource/images/bg-doolivery.png) repeat;
+}
+
+.main .header.doolivery .btn-filter:not(*:root) {
+	background: #409f71 !important;
+	color: white;	
+}
+
+.main .header.doodoc .btn-filter:not(*:root){
+	background: #f2cb22 !important;
+	color: white !important;
+	margin-left:10px;	
+}
+
+.main .header.doocalc .btn-filter:not(*:root){
+	background: #3caad5 !important;
+	color: white;	
+}
+
+
+.page-login .main .logo-container {
+	position: absolute;
+	display: inline-block;
+	width: 315px;
+	height: 270px;
+	margin: 0 70px 0 142px;
+	border-right: 8px solid #575757;
+}
+
+.page-login .main .logo-container img {
+	padding-top: 104px;
+}
+
+.page-login .main .login-form {
+	position: absolute;
+	display: inline-block;
+	margin-top: -16px;
+	width: 315px;
+	height: 270px;
+	margin-left: 550px;
+	/*margin: 0 80px 0 142px;*/
+	color: #4f4f4f;
+}
+
+.page-login .main .login-form h2,
+.page-dash .main h2,
+.page-nota .main h2,
+.page-components h2,
+.page-doodoc .main h2 {
+	color: #4f4f4f;
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 24px;
+	letter-spacing: -1px;
+	padding-bottom: 10px;
+}
+.page-login .main .login-form h2 {
+	margin-left: 6px;
+	padding: 0;
+}
+
+.page-login .main .login-form .form-group {
+	display: block;
+	margin-top: 20px;
+}
+
+.page-login .main .login-form .form-group img {
+	position: absolute;
+	margin: 8px 0 0 -22px;
+}
+
+.page-login .main .login-form .form-group input {
+	width: 224px;
+	height: 60px;
+	padding: 0 30px;
+	border: 1px solid #bebebe;
+	font-family: 'titillium';
+	color: #646464;
+	font-weight: 100;
+	font-size: 20px;
+}
+.page-login .main .login-form .form-group ::-webkit-input-placeholder {
+	 color: #646464;
+}
+.page-login .main .login-form .form-group :-moz-placeholder { /* Firefox 18- */
+	 color: #646464;  
+}
+.page-login .main .login-form .form-group ::-moz-placeholder {  /* Firefox 19+ */
+	 color: #646464;  
+}
+.page-login .main .login-form .form-group :-ms-input-placeholder {  
+	 color: #646464;  
+}
+
+.page-login .main .login-form .btn {
+	width: 286px;
+	height: 53px;
+	background-color: #b6c931;
+	margin-top: 20px;
+	cursor: pointer;
+	color: #fff;
+	font-family: 'titillium';
+	font-size: 28px;
+	font-weight: 800;
+	letter-spacing: -1px;
+}
+
+.page-login .main .login-form .btn:hover {
+	background-color: #A4B912;
+}
+
+.page-login .main .login-form .pass-recovery {
+	display: block;
+	width: 286px;
+	margin-top: 10px;
+	text-align: center;
+}
+.page-login .main .login-form .pass-recovery a {
+	color: #7A8B00;
+}
+.page-login .main .login-form .pass-recovery a:hover {
+	color: #556100;
+}
+
+.page-login label.error {
+	position: absolute;
+	display: block;
+	font-weight: 400;
+	font-size: 13px;
+	margin: -10px 0 0px 23px;
+	z-index: 1;
+	background: #2c2c2c;
+	color: #fff;
+	padding: 6px;
+	text-shadow: 0 1px 0 #000;
+	text-transform: uppercase;
+	white-space: nowrap;
+	font-size: 12px;
+	line-height: 11px;
+}
+.page-login label.error:after {
+	border: solid;
+	border-color: #2c2c2c transparent;
+	border-width: 0px 5px 5px 5px;
+	bottom: 23px;
+	/*top: -6px;*/
+	left: 9px;
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: 1;
+}
+
+
+.dash-options {
+	margin: 30px 10px;
+	width: 100%;
+}
+.dash-options div {
+	width: 280px;
+	display: inline-block;
+}
+.dash-options div:first-of-type,
+.dash-options div:nth-of-type(2) {
+	margin-right: 4%;
+}
+.dash-options div h3 {
+	padding: 0 5px;
+	font-size: 14px;
+	color: #333333;
+}
+.dash-options div p {
+	padding-left: 5px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	color: #333333;
+}
+
+/*** Submenu ***/
+
+.main .submenu {
+	border-left: 8px solid #231f20;
+	height: 54px;
+}
+.submenu > div {
+	position: relative;
+	display: inline-block;
+}
+.submenu > div:not(:first-of-type) {
+	margin-left: -4px;
+}
+.submenu > div > div {
+	position: absolute;
+	width: 565px;
+	background: #fff;
+	border: 1px solid #c7c7c7;
+	display: block;
+	z-index: 999;
+	opacity: 0;
+	pointer-events: none;
+	-webkit-transition: all .2s ease-out;
+		 -moz-transition: all .2s ease-out;
+			-ms-transition: all .2s ease-out;
+			 -o-transition: all .2s ease-out;
+					transition: all .2s ease-out;
+}
+.submenu > div:hover > div {
+	/*display: block;*/
+	opacity: 1;
+	pointer-events: auto;
+}
+.submenu > div > div > ul {
+	display: inline-block;
+	padding: 10px 5px;
+	width: 47%;
+	float: left;
+}
+.submenu > div > div > ul:nth-of-type(2) {
+	border-left: 1px dashed #e9e9e9;
+}
+.submenu > div > div > ul > li {
+	margin: 0 5px;
+}
+.submenu > div > div ul li {
+	padding: 2px 0;
+}
+.submenu > div > div ul li {
+	border-bottom: 1px solid transparent;
+}
+.submenu > div > div > ul > li:not(:last-of-type) {
+	border-bottom: 1px solid #e9e9e9;
+}
+.submenu > div > div a {
+	display: block;
+	font-size: 13px;
+	color: #727272;
+	padding: 10px 20px;
+}
+.submenu > div > div a:hover {
+	color: #fff;
+	background-color: #f2ce2e;
+}
+.submenu > div > div ul .collapse > a {
+	background: #fff url(/PokerWeb/resource/images/seta-submenu.png) center right 10px no-repeat;
+}
+.submenu > div > div ul .collapse > a:hover {
+	background: #f2ce2e url(/PokerWeb/resource/images/seta-submenu.png) center right 10px no-repeat;
+}
+.submenu > div > div ul .collapse ul {
+	display: none;
+	border-top: 1px dashed #e9e9e9;
+}
+.submenu > div > div > ul li ul li {
+	/*padding-left: 15px;*/
+}
+.submenu > div > div > ul li ul li a {
+	margin-left: 15px;
+	background: url(/PokerWeb/resource/images/seta-bullet.png) center left 5px no-repeat;
+}
+.submenu > div > div > ul li ul li span {
+	margin-left: 15px;
+	background: url(/PokerWeb/resource/images/seta-bullet.png) center left 5px no-repeat;
+	display: block;
+	padding: 10px 10px 10px 20px;
+	
+}
+.submenu:not(.default) .item {
+	position: relative;
+	display: inline-block;
+	width: 175px;
+	height: 50px;
+	border: 1px solid #c7c7c7;
+	background-color: rgba(255,255,255,.5);
+}
+.submenu:not(.default) .item.active {
+	background-color: rgba(255,255,255,.7);
+	border: none;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+}
+.submenu .item img {
+	padding: 10px;
+}
+#doodoc.active {
+	border-bottom: 3px solid #f2ce2e;
+}
+#doolivery.active {
+	border-bottom: 3px solid #409f71;
+}
+#doocalc.active {
+	border-bottom: 3px solid #3caad5;
+}
+
+
+.page-nota .main .btn-back {
+	background: #2c2c2c url(/PokerWeb/resource/images/seta-back.png) 8px 7px no-repeat;
+	margin: 20px 0;
+	display: inline-block;
+	padding: 2px 10px 3px 20px;
+	text-transform: uppercase;
+	font-size: 12px;
+	color: #fff;
+}
+.page-nota h3,
+.page-doodoc h3 {
+	color: #231f20;
+	font-size: 17px;
+	letter-spacing: -1px;
+	border-left: 7px solid #f2ce2e;
+	padding-left: 6px;
+	font-weight: 600;
+}
+.page-nota .main .tools {
+	position: absolute;
+	width: 290px;
+	right: 100px;
+	bottom: -5px;
+}
+.page-nota .main .tools a {
+	display: inline-block;
+	width: 38px;
+	height: 35px;
+	background-color: #4f4f4f;
+	background-repeat: no-repeat;
+}
+.page-nota .main .tools a:hover {
+	background-color: #b6c931;
+}
+.page-nota .main .tools a.tools-log {
+	background-image: url(/PokerWeb/resource/images/tools-log.png);
+	background-position: 8px 8px;
+}
+.page-nota .main .tools a.tools-danfe {
+	background-image: url(/PokerWeb/resource/images/tools-danfe.png);
+	background-position: 8px 7px;
+}
+.page-nota .main .tools a.tools-xml {
+	background-image: url(/PokerWeb/resource/images/tools-xml.png);
+	background-position: 9px 7px;
+}
+.page-nota .main .tools a.tools-cancel {
+	background-image: url(/PokerWeb/resource/images/tools-cancel.png);
+	background-position: 9px 8px;
+}
+.page-nota .main .tools a.tools-print {
+	background-image: url(/PokerWeb/resource/images/tools-print.png);
+	background-position: 7px 6px;
+}
+.page-nota .main .tools a.tools-ok {
+	background-image: url(/PokerWeb/resource/images/tools-ok.png);
+	background-position: 8px 4px;
+}
+.page-nota .main .tools a.tools-mail {
+	background-image: url(/PokerWeb/resource/images/tools-mail.png);
+	background-position: 10px 11px;
+}
+
+#nav-tabs {
+	/*position: relative;*/
+	width: 100%;
+	margin-top: 120px;
+	font-size: 0;
+}
+
+.ui-state-default{
+	box-shadow: 0px 0px 0px 0px !important;	
+}
+
+#nav-tabs a {
+	display: inline-block;
+	padding: 15px 32px;
+	font-size: 14px;
+	color: #231f20;
+	background-color: #f9f9f9;
+	border-bottom: 1px solid #e1e1e1;
+	border-right: 1px solid #e1e1e1;
+	border-top: 5px solid transparent;
+	text-align: center;
+}
+#nav-tabs a:first-of-type {
+	padding: 15px 38px;
+}
+#nav-tabs a:last-of-type {
+	border-right: none;
+	padding: 15px 34px;
+}
+#nav-tabs a.active {
+	position: relative;
+	background-color: #fff;
+	border-top: 5px solid #f2ce2e;
+	border-bottom: 1px solid #fff;
+	z-index: 900;
+	-webkit-box-shadow: 0px 1px 1px 0px rgba(150, 150, 150, 0.6);
+		 -moz-box-shadow: 0px 1px 1px 0px rgba(150, 150, 150, 0.6);
+					box-shadow: 0px 1px 1px 0px rgba(150, 150, 150, 0.6);
+}
+#nav-tabs a span {
+	display: none;
+}
+#nav-tabs a.active span {
+	display: block;
+	position: absolute;
+	bottom: -12px;
+	/*left: 45%;*/
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	color: #fff;
+	font-size: 14px;
+	/*display: block;*/
+	z-index: 899;
+	-webkit-transform: scaleX(3.4);
+		 -moz-transform: scaleX(3.4);
+			-ms-transform: scaleX(3.4);
+			 -o-transform: scaleX(3.4);
+	text-shadow: 0px 2px 1px rgba(150, 150, 150, 0.6);
+}
+
+.page-nota .body .content-tabs {
+	margin-top: 30px;
+}
+.page-nota .body .content-tabs h3 {
+	margin-bottom: 30px;
+}
+.page-nota .body .content-tabs .col {
+	width: 45%;
+	float: left;
+}
+
+.page-nota .body .content-tabs .col2 {
+	width: 30%;
+	float: left;
+}
+.page-nota .body .content-tabs .col:nth-of-type(2) {
+	margin-left: 10%;
+}
+.page-nota .body .content-tabs h4 {
+	font-size: 13px;
+}
+.page-nota .body .content-tabs p {
+	font-size: 13px;
+	padding-bottom: 15px;
+}
+
+/*** Pï¿½gina DooDoc - Filtro ***/
+
+.page-doodoc .main h2 {
+	margin-top: 20px;
+}
+#btn-filter-advanced {
+	background-color: #4f4f4f;
+	margin: 15px 0;
+	display: inline-block;
+	padding: 5px 10px 5px 12px;
+	font-size: 14px;
+	color: #fff;
+}
+#btn-filter-advanced:hover {
+	background-color: #b6c931;
+}
+#btn-filter-advanced img {
+	margin-left: 3px;
+}
+.flip {
+	-webkit-transform: rotateX(180deg);
+		 -moz-transform: rotateX(180deg);
+			 -o-transform: rotateX(180deg);
+					transform: rotateX(180deg);
+
+	-webkit-transition: all .2s ease-out;
+		 -moz-transition: all .2s ease-out;
+			-ms-transition: all .2s ease-out;
+			 -o-transition: all .2s ease-out;
+					transition: all .2s ease-out;
+}
+
+
+/*** Filtro ***/
+
+.page-doodoc .main .filter {
+	position: relative;
+	margin-top: 10px;
+}
+.page-doodoc .main .filter fieldset {
+	display: inline-block;
+	padding: 0 25px 5px 0;
+	border-right: 1px dashed #fff;
+	font-size: 14px;
+	color: #646464;
+	/*vertical-align: middle;*/
+	height: 60px;
+}
+.page-doodoc .main .filter fieldset:not(:first-of-type) {
+	padding-left: 20px;
+	vertical-align: bottom;
+}
+.page-doodoc .main .filter fieldset legend {
+	padding-bottom: 3px;
+}
+.page-doodoc .main .filter fieldset input {
+	width: 130px;
+	height: 35px;
+	border: 1px solid #bebebe;
+	padding: 0 10px;
+/**/vertical-align: bottom;
+}
+.page-doodoc .main .filter fieldset .select-border {
+	border: 1px solid #bebebe;
+	padding: 2px 3px;
+	width: 170px;
+	overflow: hidden;
+	background: #fff url(/PokerWeb/resource/images/seta2.png) right 10px center no-repeat;
+}
+.page-doodoc .main .filter fieldset select {
+	background: transparent;
+	width: 205px;
+	height: 30px;
+	color: #a0a0a0;
+	font-size: 11px;
+	line-height: 19px;
+	padding: 0 10px;
+	cursor: pointer;
+
+	-webkit-appearance: none;
+		 -moz-appearance: none;
+			 -o-appearance: none;
+					appearance: none;
+
+	-webkit-user-select: none;
+	 -khtml-user-select: none;
+		 -moz-user-select: none;
+			-ms-user-select: none;
+					user-select: none;
+}
+.page-doodoc .main .filter fieldset select, x:-moz-any-link {
+	padding: 8px 10px 0;
+}
+.page-doodoc .main .filter fieldset select option {
+	cursor: pointer;
+}
+.page-doodoc .main .filter .filter-border {
+	display: inline-block;
+	padding-bottom: 8px;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+fieldset.dates legend {
+	/*margin-bottom: -15px;*/
+}
+.ui-datepicker-trigger {
+	position: relative;
+	/*top: 14px;*/
+	margin-left: 2px;
+	width: 38px;
+	height: 37px;
+	background-color: #4f4f4f;
+	background-position: center;
+	background-image: url(/PokerWeb/resource/images/icon-datepicker.png);
+	background-repeat: no-repeat;
+	cursor: pointer;
+	vertical-align: bottom;
+}
+.ui-datepicker-trigger:hover {
+	background-color: #b6c931;
+}
+.ui-datepicker-header.ui-widget-header {
+	border: none;
+	/* background: #f2ce2e; */
+}
+.ui-widget-header a {
+	-webkit-transition: none;
+		 -moz-transition: none;
+			-ms-transition: none;
+			 -o-transition: none;
+					transition: none;
+}
+.page-doodoc .main .filter fieldset span {
+	margin: 0 5px;
+}
+.filter-valor span {
+	position: relative;
+	/*padding: 9px 0 0 3px;*/
+	margin-right: -25px !important;
+	top: -10px;
+}
+#filter-valor {
+	padding-left: 24px;
+}
+
+
+.btn-filter {
+	position: relative;
+	display: inline-block  ;
+	margin-left: 15px  ;
+	font-size: 17px ;
+	font-weight: 700 ;
+	color: #fff ;
+	background: #f2ce2e ;
+	width: 170px ;
+	height: 37px ;
+	cursor: pointer ;
+	top: 0 ; /* IE */
+	-webkit-transition: all .6s ;
+		 -moz-transition: all .6s ;
+			-ms-transition: all .6s ;
+			 -o-transition: all .6s ;
+					transition: all .6s ;
+	/*text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);*/
+}
+
+
+.btn-filter:not(*:root) {
+	top: -12px; /* Chrome */
+	margin-left: 0%;
+	padding-right:5px;
+}	
+}
+.btn-filter, x:-moz-any-link {
+	top: -5px; /* FF */
+}
+.btn-filter.filter-advanced {
+	top: 80px;
+}
+.btn-filter.filter-advanced:not(*:root) {
+	top: 69px; /* Chrome */
+}
+.btn-filter.filter-advanced, x:-moz-any-link {
+	top: 69px; /* FF */
+}
+#filter-advanced {
+	margin-top: 5px;
+}
+#filter-advanced fieldset:last-of-type {
+	border-right: none;
+}
+#filter-advanced fieldset input {
+	width: 150px;
+}
+
+.page-doodoc .body {
+	display: block;
+	margin-top: 60px;
+}
+#btn-select-all {
+	position: relative;
+	display: inline-block;
+	width: 66px;
+	height: 42px;
+	margin-bottom: 5px;
+	background: #4f4f4f url(/PokerWeb/resource/images/bt-select-all.png) center no-repeat;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+#btn-select-all > div {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+#btn-select-all ul {
+	position: absolute;
+	margin-top: 40px;
+	width: 130px;
+	display: none;
+	background: #fff;
+	padding: 5px;
+	border: 1px solid #c7c7c7;
+	display: none;
+	z-index: 999;
+}
+#btn-select-all:hover ul {
+	display: block;
+}
+#btn-select-all ul li a {
+	display: block;
+	font-size: 13px;
+	color: #727272;
+	padding: 5px 10px;
+}
+#btn-select-all ul li a:hover {
+	color: #fff;
+	background-color: #f2ce2e;
+}
+
+
+/*** Tabela ***/
+/* .ui-datatable.borderless thead th,
+.ui-datatable.borderless tbody,
+.ui-datatable.borderless tbody tr,
+.ui-datatable.borderless tbody td {
+   border-right-style: none;
+   border-left-style: none;
+}
+
+.itens
+{
+	font-family: 'titillium';
+}
+
+.itens.ui-state-active
+{
+	background: #D9D9C9;
+}
+
+.itens input[type='checkbox'] {
+	opacity: 0;
+	float: left;
+	width: 0;
+	height: 0;
+}
+.itens input[type='checkbox'] + label {
+	padding: 5px 0 4px 24px;
+	display: inline-block;
+	margin-top: 2px;
+	width: 15px;
+	height: 15px;
+	border: 3px solid #535353;
+	cursor: pointer;
+	background-color: transparent;
+	background: url(off.png) left center no-repeat;
+}
+.itens input[type='checkbox']:checked + label {
+	padding: 5px 0 4px 24px;
+	cursor: pointer;
+	background: #fff url(/PokerWeb/resource/images/check.png) left 2px bottom 3px no-repeat;
+}
+
+.ui-datatable thead th, .ui-datatable tbody td, .ui-datatable tfoot td{
+		overflow:visible;
+		border-width: 0;
+		font-family:titillium;
+		font-size: 14px;
+}
+
+
+.itens thead tr th {
+	padding: 15px 5px;
+	font-size: 13px;
+	color: #333;
+	background-color: #fbfbfb;
+	border-top: 1px solid #e1e1e1;
+	border-bottom: 1px solid #e1e1e1;
+	cursor: pointer;
+	white-space: nowrap;
+	-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		 -khtml-user-select: none;
+			 -moz-user-select: none;
+				-ms-user-select: none;
+						user-select: none;
+}
+.itens thead tr th.sort-asc,
+.itens thead tr th.sort-desc {
+	background-color: #e5e5e5;
+}
+.itens thead tr th:not(:first-of-type):not(:last-of-type):hover {
+	background-color: #d9d9d9;
+}
+.itens thead tr th:first-of-type,
+.itens thead tr th:last-of-type {
+	cursor: default;
+}
+.itens thead tr th span 
+{
+	
+}
+.itens thead tr th.sort-asc span {
+	visibility: visible;
+}
+.itens thead tr th.sort-desc span {
+	visibility: visible;
+	-webkit-transform: rotateX(180deg);
+		 -moz-transform: rotateX(180deg);
+			 -o-transform: rotateX(180deg);
+					transform: rotateX(180deg);
+}
+.itens tbody tr {
+	border-bottom: 1px solid #e1e1e1;
+}
+.itens tbody tr td {
+	background-color:#FFFFFF;
+	padding: 0 5px;
+	font-size: 13px;
+	color: #333;
+	vertical-align: middle;
+	border-bottom: 1px solid #e1e1e1;
+}
+.itens tbody tr td:first-of-type {
+	position: relative;
+	text-align: center;
+	border-right: 1px dashed #e1e1e1;
+}
+.itens tbody tr td:first-of-type label:after{
+	position: absolute;
+	height: 36px;
+	right: 0;
+	top: 6px;
+	content: "";
+	border-right: 1px dashed #d1d1d1;
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+border: 1px solid !important;
+font-weight: bold;
+color: #white !important;
+}
+
+.itens tbody tr td:last-of-type {
+	padding: 0 10px;
+}
+.itens thead tr th:nth-last-of-type(2),
+.itens thead tr th:nth-last-of-type(3),
+.itens tbody tr td:nth-last-of-type(2),
+.itens tbody tr td:nth-last-of-type(3) {
+	text-align: right;
+}
+.itens a {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-position: 8px 8px;
+	vertical-align: text-bottom;
+} */
+
+/* .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+	font-weight: bold;
+color: #1c94c4;
+border-radius: 0px;
+padding-top: 5px;
+padding-left: 15px;
+background-color: white;
+} */
+
+.ui-widget-header{
+
+/* color: #fff;
+font-weight: bold !important;
+height: 30px !important;	
+border:0px white !important;
+background: white !important;
+background-color: white !important; */
+
+	}
+
+a.icone-xml {
+	background-image: url(/PokerWeb/resource/images/item-xml.png);
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-repeat: no-repeat;
+	/*background-position: 8px 8px;*/
+	vertical-align: text-bottom;
+}
+
+a.item-log {
+	background-image: url(/PokerWeb/resource/images/item-log.png);
+}
+a.item-pdf {
+	background-image: url(/PokerWeb/resource/images/item-pdf.png);
+}
+a.item-xml {
+	background-image: url(/PokerWeb/resource/images/item-xml.png);
+}
+a.item-acoes {
+	background-image: url(/PokerWeb/resource/images/item-acoes.png);
+}
+a.item-download-sefaz {
+	background-image: url(/PokerWeb/resource/images/item-download-sefaz.png);
+}
+a.item-mail {
+	background-image: url(/PokerWeb/resource/images/item-mail.png);
+}
+a.item-editar {
+	background-image: url(/PokerWeb/resource/images/tabela-editar.png);
+}
+a.item-editar:hover {
+	background-image: url(/PokerWeb/resource/images/tabela-editar-on.png);
+}
+a.item-excluir {
+	background-image: url(/PokerWeb/resource/images/tabela-excluir.png);
+}
+a.item-excluir:hover {
+	background-image: url(/PokerWeb/resource/images/tabela-excluir-on.png);
+}
+a.mark-unread-icon {
+	background-image: url(/PokerWeb/resource/images/mark_unread.png);
+}
+a.delete-notification-icon {
+	background-image: url(/PokerWeb/resource/images/excluir-notification.png);
+}
+.invisible{
+	visibility: hidden !important;
+	/*visibility: visible !important;*/
+}
+/*a.icone{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-repeat: no-repeat;
+	vertical-align: text-bottom;
+}*/
+.status-icon {
+	display: inline-block;
+	width: 46px;
+	height: 46px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.status-icon span {
+	display: none;
+}
+.status-aguardando {
+	background-image: url(/PokerWeb/resource/images/status-01.png);
+}
+.status-aprovado-cont {
+	background-image: url(/PokerWeb/resource/images/status-02.png);
+}
+.status-aprovado {
+	background-image: url(/PokerWeb/resource/images/status-03.png);
+}
+.status-rejeitado {
+	background-image: url(/PokerWeb/resource/images/status-04.png);
+}
+.status-obtendo-retorno {
+	background-image: url(/PokerWeb/resource/images/status-05.png);
+}
+.status-enviado {
+	background-image: url(/PokerWeb/resource/images/status-06.png);
+}
+.status-cancelado {
+	background-image: url(/PokerWeb/resource/images/status-07.png);
+}
+.status-erro {
+	background-image: url(/PokerWeb/resource/images/status-08.png);
+}
+.status-denegado {
+	background-image: url(/PokerWeb/resource/images/status-09.png);
+}
+.status-inutilizado {
+	background-image: url(/PokerWeb/resource/images/status-10.png);
+}
+
+
+/*** Tooltip ***/
+
+.tooltip {
+		/*display: inline;*/
+		position: relative;
+}
+.tooltip:hover:after {
+	position: absolute;
+	display: block;
+	bottom: 44px;
+	left: -5px;
+	background: #2c2c2c;
+	color: #fff;
+	content: attr(title);
+	padding: 6px 5px;
+	text-shadow: 0 1px 0 #000;
+	text-transform: uppercase;
+	white-space: nowrap;
+	z-index: 1098;
+	font-size: 12px;
+	line-height: 11px;
+}
+.tooltip:hover:before {
+	border: solid;
+	border-color: #2c2c2c transparent;
+	border-width: 5px 5px 0 5px;
+	bottom: 39px;
+	/*top: -6px;*/
+	left: 15px;
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: 1099;
+}
+
+.page-components h2 {
+	margin: 20px 0 0 0;
+}
+.page-components h3 {
+	padding: 20px 0 20px 0;
+}
+
+
+/*** Log ***/
+
+#log {
+	position: fixed;
+	display: block;
+	border: 1px solid red;
+	right: 0;
+	background-color: #fff;
+	z-index: 999999;
+}
+
+
+/*** Componentes ***/
+
+/*** Submenu default ***/
+.submenu.default {
+	margin-bottom: 20px;
+}
+.submenu.default > div {
+	margin-right: 3px;
+}
+.submenu.default .item {
+	position: relative;
+	display: inline-block;
+	width: 150px;
+	height: 28px;
+	padding: 2px 10px 0 20px;
+	border: 1px solid #a9a9a9;
+	color: #737373;
+	font-size: 17px;
+	font-weight: 600;
+}
+.submenu.default > div:hover .item {
+	color: #fff;
+	border: 1px solid transparent;
+}
+.submenu.default > div > div {
+	margin-top: -1px;
+	width: 300px;
+	-webkit-transition: all .2s ease-out;
+		 -moz-transition: all .2s ease-out;
+			-ms-transition: all .2s ease-out;
+			 -o-transition: all .2s ease-out;
+					transition: all .2s ease-out;
+}
+.submenu.default > div > div > ul {
+	padding: 3px 0 10px 0px;
+	width: 100%;
+}
+.submenu > div > div a {
+	font-size: 14px;
+	color: #727272;
+	padding: 10px 10px 10px 20px;
+}
+
+/*** Cores do submenu default ***/
+.submenu.default.color-yellow > div:hover {
+	background-color: #f2cc23;
+}
+.submenu.default.color-yellow > div > div a:hover {
+	background-color: #f2cc23;
+}
+.submenu.default.color-blue > div:hover {
+	background-color: #3daad5;
+}
+.submenu.default.color-blue > div > div a:hover {
+	background-color: #3daad5;
+}
+.submenu.default.color-green > div:hover {
+	background-color: #3f9f71;
+}
+.submenu.default.color-green > div > div a:hover {
+	background-color: #3f9f71;
+}
+
+
+/*** Buttons ***/
+
+.btn {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	font-size: 17px;
+	line-height: 34px;
+	font-weight: 700;
+	color: #fff;
+	background-color: #aaa;
+	width: 130px;
+	height: 36px;
+	cursor: pointer;
+	top: 0;
+}
+.btn:hover {
+	background-color: #777;
+}
+
+/*** Cores dos botï¿½es ***/
+.btn.color-yellow,
+.color-yellow .btn,
+.include-list.color-yellow ul li.selected {
+	background-color: #f2cc23;
+}
+.btn.color-yellow:hover,
+.color-yellow .btn:hover {
+	background-color: #9f882a;
+}
+.btn.color-blue,
+.color-blue .btn,
+.include-list.color-blue ul li.selected {
+	background-color: #3daad5;
+}
+.btn.color-blue:hover,
+.color-blue .btn:hover {
+	background-color: #2b6f86;
+}
+.btn.color-green,
+.color-green .btn,
+.include-list.color-green ul li.selected {
+	background-color: #3f9f71;
+}
+.btn.color-green:hover,
+.color-green .btn:hover {
+	background-color: #306d4c;
+}
+
+/*** Paginadores ***/
+.pagination {
+	margin: 10px 0 20px 0;
+}
+.pagination .btn {
+	line-height: 34px;
+	text-align: center;
+	width: 34px;
+	height: 34px;
+	background-color: #fff;
+	color: #808080;
+	font-size: 13px;
+	font-weight: 200;
+	border: 1px solid #a9a9a9;
+}
+.pagination .btn:hover:not(.active) {
+	background-color: #eee;
+}
+.pagination .btn.active {
+	color: #fff;
+	border: 1px solid transparent;
+	cursor: default;
+	background-color: #bbb;
+}
+.pagination .btn.prev {
+	width: 80px;
+	padding: 0 15px;
+	text-align: right;
+	font-size: 15px;
+	background: url(/PokerWeb/resource/images/seta-prev.png) center left 10px no-repeat;
+}
+.pagination .btn.next {
+	width: 80px;
+	padding: 0 15px;
+	text-align: left;
+	font-size: 15px;
+	background: url(/PokerWeb/resource/images/seta-next.png) center right 10px no-repeat;
+}
+.pagination span {
+	margin: 0 10px;
+	letter-spacing: 1px;
+}
+
+/*** Cores dos paginadores ***/
+.pagination.color-yellow .btn.active {
+	background-color: #f2cc23;
+}
+.pagination.color-blue .btn.active {
+	background-color: #3daad5;
+}
+.pagination.color-green .btn.active {
+	background-color: #3f9f71;
+}
+
+/*** Parï¿½grafo ***/
+p.coluna {
+	width: 350px;
+	color: #6d6d6d;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+p strong.strong1 {
+	color: #3c3a3b;
+	/*text-decoration: underline;*/
+	border-bottom: 1px solid #b6b6b6;
+	font-style: italic;
+	font-weight: 600;
+}
+p strong.strong2 {
+	color: #737373;
+	/*text-decoration: underline;*/
+	border-bottom: 1px solid #b6b6b6;
+	font-style: italic;
+	font-weight: 600;
+}
+
+/*** Lista ***/
+ul.lista {
+	padding: 10px 20px;
+}
+ul.lista li {
+	color: #6a6a6a;
+	font-weight: 600;
+	line-height: 26px;
+	padding-left: 20px;
+}
+
+
+/*** Formulï¿½rios ***/
+.form .coluna {
+	width: 300px;
+	float: left;
+}
+
+/*** Checkboxes ***/
+.form input[type='checkbox'] {
+	opacity: 0;
+	float: left;
+	width: 0;
+	height: 0;
+}
+.form input[type='checkbox'] + label {
+	display: inline-block;
+	margin-top: 2px;
+	margin-right: 10px;
+	cursor: pointer;
+	background-color: transparent;
+}
+.form input.check-big + label {
+	width: 15px;
+	height: 15px;
+	border: 3px solid #535353;
+}
+.form input.check-big:checked + label {
+	background: #fff url(/PokerWeb/resource/images/check.png) left 2px bottom 3px no-repeat;
+}
+.form input.check-med + label {
+	width: 12px;
+	height: 12px;
+	border: 3px solid #535353;
+}
+.form input.check-med:checked + label {
+	background: #fff url(/PokerWeb/resource/images/check-med.png) left 1px bottom 2px no-repeat;
+}
+.form input.check-sma + label {
+	width: 9px;
+	height: 9px;
+	border: 2px solid #535353;
+}
+.form input.check-sma:checked + label {
+	background: #fff url(/PokerWeb/resource/images/check-sma.png) left 1px bottom 2px no-repeat;
+}
+.form input.datepicker {
+	width: 80px;
+}
+
+/*** Radio ***/
+.form input[type='radio'] {
+	opacity: 0;
+	float: left;
+	width: 0;
+	height: 0;
+}
+.form input[type='radio'] + label {
+	padding: 5px 0 5px 24px;
+	/*width: 150px;*/
+	display: inline-block;
+	margin-top: 2px;
+	cursor: pointer;
+	background-color: transparent;
+	/*vertical-align: middle;*/
+}
+.form fieldset input[type='radio']:not(:first-of-type) + label {
+	margin-left: 50px;
+}
+
+.form input.radio-big + label {
+	/*width: 27px;*/
+	height: 27px;
+	font-size: 18px;
+	padding-left: 32px;
+	background: url(/PokerWeb/resource/images/radio-big.png) left center no-repeat;
+}
+.form input.radio-big:checked + label {
+	background: #fff url(/PokerWeb/resource/images/radio-big-on.png) left center no-repeat;
+}
+.form input.radio-med + label {
+	/*width: 23px;*/
+	height: 23px;
+	padding-top: 7px;
+	padding-left: 26px;
+	font-size: 16px;
+	background: url(/PokerWeb/resource/images/radio-med.png) left center no-repeat;
+}
+.form input.radio-med:checked + label {
+	background: #fff url(/PokerWeb/resource/images/radio-med-on.png) left center no-repeat;
+}
+.form input.radio-sma + label {
+	/*width: 21px;*/
+	height: 21px;
+	background: url(/PokerWeb/resource/images/radio-sma.png) left center no-repeat;
+}
+.form input.radio-sma:checked + label {
+	background: #fff url(/PokerWeb/resource/images/radio-sma-on.png) left center no-repeat;
+}
+
+/*** Inputs de Texto ***/
+.form {
+	margin-top: 10px;
+}
+.form fieldset,
+div.fieldset {
+	display: inline-block;
+	padding: 0 18px 5px 0;
+	margin-bottom: 20px;
+	border-right: 1px dashed #fff;
+	font-size: 14px;
+	color: #646464;
+	vertical-align: text-bottom;
+}
+.form fieldset legend,
+.fieldset > span {
+	padding-bottom: 3px;
+}
+.form fieldset input {
+	width: 200px;
+	height: 35px;
+	border: 1px solid #bebebe;
+	padding: 0 10px;
+}
+.form fieldset input.shortfield {
+	width: 25px;
+}
+.form fieldset input.float-left,
+.form fieldset input.float-right {
+	width: 130px;
+}
+.form fieldset input.cep {
+	width: 70px;
+}
+.form fieldset .select-border {
+	border: 1px solid #bebebe;
+	padding: 2px 3px;
+}
+.form fieldset select {
+	width: 175px;
+	height: 30px;
+	color: #a0a0a0;
+	font-size: 11px;
+	padding: 0 10px;
+	background: #fff url(/PokerWeb/resource/images/seta2.png) right 10px center no-repeat;
+	cursor: pointer;
+	-webkit-appearance: none;
+		 -moz-appearance: none;
+			 -o-appearance: none;
+					appearance: none;
+}
+.form fieldset select option {
+	cursor: pointer;
+}
+.form .filter-border {
+	display: inline-block;
+	padding-bottom: 8px;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+
+
+/*** Select Box ***/
+
+.wrapper-dropdown-3 {
+	position: relative;
+	width: 270px;
+	margin: 0 auto;
+	padding: 10px 10px 10px 20px !important;
+
+	/* Styles */
+	background: #fff;
+	border: 1px solid silver;
+	cursor: pointer;
+	outline: none;
+	font-size: 13px !important;
+
+	width: 175px;
+	color: #a0a0a0;
+	font-size: 11px;
+	padding: 0 10px;
+	background: #fff url(/PokerWeb/resource/images/seta2.png) right 10px center no-repeat;
+	cursor: pointer;
+
+	-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		 -khtml-user-select: none;
+			 -moz-user-select: none;
+				-ms-user-select: none;
+						user-select: none;
+}
+
+.wrapper-dropdown-3 .dropdown {
+	/* Size & position */
+	position: absolute;
+	top: 100%;
+	margin-top: 1px;
+	left: -1px;
+	right: -1px;
+	padding: 0 1px;
+
+	/* Styles */
+	background: white;
+	border: inherit;
+	border-top: none;
+	list-style: none;
+	-webkit-transition: all 0.2s ease-out;
+		 -moz-transition: all 0.2s ease-out;
+			-ms-transition: all 0.2s ease-out;
+			 -o-transition: all 0.2s ease-out;
+					transition: all 0.2s ease-out;
+
+	/* Hiding */
+	opacity: 0;
+	pointer-events: none;
+	/*display: none;*/
+}
+.wrapper-dropdown-3 .dropdown li {
+	position: relative; /* Enable absolute positioning for checkboxes */
+	padding: 1px 0;
+	border-bottom: 1px solid #e5e5e5;
+}
+.wrapper-dropdown-3 .dropdown li a {
+	display: block;
+	text-decoration: none;
+	padding: 8px 10px 8px 20px; /* Same padding as the button */
+	font-size: 14px;
+	color: #7f7f7f;
+	-webkit-transition: all 0.2s ease-out;
+		 -moz-transition: all 0.2s ease-out;
+			-ms-transition: all 0.2s ease-out;
+			 -o-transition: all 0.2s ease-out;
+					transition: all 0.2s ease-out;
+	margin: auto;
+}
+
+.wrapper-dropdown-3 .dropdown li i {
+		float: right;
+		color: inherit;
+}
+
+/* Hover state */
+
+.wrapper-dropdown-3 .dropdown li:hover a {
+	background: #f3f8f8;
+	color: #fff;
+}
+.wrapper-dropdown-3.color-yellow .dropdown li:hover a {
+	background-color: #f2cb22;
+}
+.wrapper-dropdown-3.color-blue .dropdown li:hover a {
+	background-color: #3caad5;
+}
+.wrapper-dropdown-3.color-green .dropdown li:hover a {
+	background-color: #409f71;
+}
+
+/* Active state */
+
+.wrapper-dropdown-3.active .dropdown {
+		opacity: 1;
+		pointer-events: auto;
+}
+
+/* No CSS3 support */
+
+.no-opacity       .wrapper-dropdown-3 .dropdown,
+.no-pointerevents .wrapper-dropdown-3 .dropdown {
+		display: none;
+		opacity: 1; /* If opacity support but no pointer-events support */
+		pointer-events: auto; /* If pointer-events support but no pointer-events support */
+}
+
+.no-opacity       .wrapper-dropdown-3.active .dropdown,
+.no-pointerevents .wrapper-dropdown-3.active .dropdown {
+		display: block;
+}
+
+
+/*** Combo Box ***/
+
+.wrapper-dropdown-4 {
+	/* Size and position */
+	position: relative;
+	width: 270px;
+	margin: 0 auto;
+	padding: 10px 10px 10px 20px !important;
+
+	/* Styles */
+	background: #fff;
+	border: 1px solid silver;
+	cursor: pointer;
+	outline: none;
+	font-size: 13px !important;
+
+	width: 175px;
+	color: #a0a0a0;
+	font-size: 11px;
+	padding: 0 10px;
+	background: #fff url(/PokerWeb/resource/images/seta2.png) right 10px center no-repeat;
+	cursor: pointer;
+
+	-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		 -khtml-user-select: none;
+			 -moz-user-select: none;
+				-ms-user-select: none;
+						user-select: none;
+}
+
+.wrapper-dropdown-4 .dropdown {
+	/* Size & position */
+	position: absolute;
+	top: 100%;
+	margin-top: 1px;
+	left: -1px;
+	right: -1px;
+	padding: 0 1px;
+
+	/* Styles */
+	background: white;
+	border: inherit;
+	border-top: none;
+	list-style: none;
+	-webkit-transition: all 0.2s ease-out;
+		 -moz-transition: all 0.2s ease-out;
+			-ms-transition: all 0.2s ease-out;
+			 -o-transition: all 0.2s ease-out;
+					transition: all 0.2s ease-out;
+
+	/* Hiding */
+	opacity: 0;
+	pointer-events: none;
+}
+
+.wrapper-dropdown-4 .dropdown li {
+	position: relative; /* Enable absolute positioning for checkboxes */
+	padding: 1px 0;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.wrapper-dropdown-4 .dropdown li label {
+		display: block;
+		padding: 8px 10px 8px 20px; /* Same padding as the button */
+		font-size: 14px;
+		color: #7f7f7f;
+		-webkit-transition: all 0.2s ease-out;
+			 -moz-transition: all 0.2s ease-out;
+				-ms-transition: all 0.2s ease-out;
+				 -o-transition: all 0.2s ease-out;
+						transition: all 0.2s ease-out;
+		margin: auto;
+}
+.wrapper-dropdown-4 .dropdown li label span {
+	display: inline-block;
+	margin-bottom: -3px;
+	margin-right: 8px;
+	width: 10px;
+	height: 10px;
+	border: 2px solid #535353;
+	cursor: pointer;
+	background-color: transparent;
+}
+
+.wrapper-dropdown-4 .dropdown li:last-of-type label {
+		border: none;
+}
+
+.wrapper-dropdown-4 .dropdown li input /* Checkboxes */ {
+		position: absolute;
+		display: block;
+		/*right: 10px;*/
+		top: 50%;
+		margin-top: -8px;
+}
+
+/* Hover state */
+
+.wrapper-dropdown-4 .dropdown li:hover label {
+	background: #e5e5e5;
+}
+
+/* Checked state */
+
+.wrapper-dropdown-4 .dropdown li input:checked ~ label {
+	color: #fff;
+}
+.wrapper-dropdown-4 .dropdown li input:checked ~ label span {
+	background: transparent url(/PokerWeb/resource/images/check-med.png) left 1px bottom 2px no-repeat;
+}
+
+.wrapper-dropdown-4.color-yellow .dropdown li input:checked ~ label {
+	background-color: #f2cb22;
+}
+.wrapper-dropdown-4.color-blue .dropdown li input:checked ~ label {
+	background-color: #3caad5;
+}
+.wrapper-dropdown-4.color-green .dropdown li input:checked ~ label {
+	background-color: #409f71;
+}
+
+/* Active state */
+
+.wrapper-dropdown-4.active:after {
+		border-width: 0 6px 6px 6px;
+}
+
+.wrapper-dropdown-4.active .dropdown {
+		opacity: 1;
+		pointer-events: auto;
+}
+
+/* No CSS3 support */
+
+.no-opacity       wrapper-dropdown-4 .dropdown,
+.no-pointerevents .wrapper-dropdown-4 .dropdown {
+		display: none;
+		opacity: 1; /* If opacity support but no pointer-events support */
+		pointer-events: auto; /* If pointer-events support but no pointer-events support */
+}
+
+.no-opacity       .wrapper-dropdown-4.active .dropdown,
+.no-pointerevents .wrapper-dropdown-4.active .dropdown {
+		display: block;
+}
+
+
+/*** Listas de inclusï¿½o ***/
+
+.include-list {
+	margin-bottom: 20px;
+}
+.include-list > div {
+	display: inline-block;
+	font-size: 14px;
+	color: #646464;
+	vertical-align: middle;
+}
+.include-list > div > span {
+	display: block;
+	padding-bottom: 5px;
+}
+.include-list ul {
+	width: 300px;
+	height: 130px;
+	padding: 1px;
+	background: #fff;
+	border: 1px solid silver;
+	overflow-y: scroll;
+}
+.include-list ul li {
+	padding: 3px 10px;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.include-list ul li:hover {
+	background: #e5e5e5;
+}
+.include-list .controls {
+	margin-top: 10px;
+}
+.include-list .controls button {
+	display: block;
+	width: 27px;
+	height: 27px;
+	margin: 5px 10px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.include-list .controls a {
+	display: block;
+	width: 27px;
+	height: 27px;
+	margin: 5px 10px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.include-list .controls button.tooltip:after {
+	bottom: 35px;
+}
+.include-list .controls button.tooltip:before {
+	bottom: 30px;
+}
+.include-list .controls button.exclude-one {
+	background-image: url(/PokerWeb/resource/images/bt-list-exclude-one.png);
+}
+.include-list .controls button.exclude-all {
+	background-image: url(/PokerWeb/resource/images/bt-list-exclude-all.png);
+}
+.include-list .controls button.include-one {
+	background-image: url(/PokerWeb/resource/images/bt-list-include-one.png);
+}
+.include-list .controls button.include-all {
+	background-image: url(/PokerWeb/resource/images/bt-list-include-all.png);
+}
+
+.exclude-one {
+	background-image: url(/PokerWeb/resource/images/bt-list-exclude-one.png);
+}
+.exclude-all {
+	background-image: url(/PokerWeb/resource/images/bt-list-exclude-all.png);
+}
+.include-one {
+	background-image: url(/PokerWeb/resource/images/bt-list-include-one.png);
+}
+.include-all {
+	background-image: url(/PokerWeb/resource/images/bt-list-include-all.png);
+}
+
+/*** Alerts ***/
+.btn.modal {
+	width: auto;
+	margin: 0 20px 20px 0;
+	padding: 0 20px;
+	display: inline-block;
+	font-size: 16px;
+}
+
+div.modal {
+	position: fixed;
+	display: none;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+div.modal .overlay {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.6);
+}
+div.modal.alert .overlay {
+	cursor: pointer;
+}
+div.modal .content {
+	position: relative;
+	display: block;
+	width: 350px;
+	margin: 20% auto;
+	padding: 10px 20px 20px;
+	border: 3px solid #bebebe;
+	background: #fff;
+	z-index: 9999;
+	text-align: left;
+}
+
+div.modal .content .icon {
+	display: inline-block;
+	float: left;
+	width: 42px;
+	height: 42px;
+	margin-right: 10px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+div.modal.success .content .icon {
+	background-image: url(/PokerWeb/resource/images/modal-success.png);
+}
+div.modal.success .content .icon.save {
+	background-image: url(/PokerWeb/resource/images/modal-success-save.png);
+}
+div.modal.error .content .icon {
+	background-image: url(/PokerWeb/resource/images/modal-error.png);
+}
+div.modal.error .content .icon.save {
+	background-image: url(/PokerWeb/resource/images/modal-error-save.png);
+}
+div.modal.warning .content .icon {
+	background-image: url(/PokerWeb/resource/images/modal-warning.png);
+}
+div.modal.info .content .icon {
+	background-image: url(/PokerWeb/resource/images/modal-info.png);
+}
+
+div.modal .content .header {
+	font-size: 14px;
+	font-weight: 600;
+}
+div.modal.success .content .header {
+	color: #b6c931;
+}
+div.modal.error .content .header {
+	color: #ae0509;
+}
+div.modal.warning .content .header {
+	color: #f2cb22;
+}
+div.modal.info .content .header {
+	color: #3caad5;
+}
+
+div.modal .content .message {
+	font-size: 13px;
+	color: #484848;
+}
+
+div.modal .content .buttons {
+	margin-top: 20px;
+	text-align: center;
+}
+div.modal .content .buttons .btn {
+	width: auto;
+	padding: 0 15px;
+	font-size: 14px;
+	font-weight: 600;
+	margin-right: 10px;
+}
+div.modal .content .buttons .btn-primary {
+	background-color: #4f4f4f;
+}
+div.modal .content .buttons .btn-primary:hover {
+	background-color: #000;
+}
+
+div.modal input[type="text"] {
+	width: 200px;
+	height: 35px;
+	border: 1px solid #bebebe;
+	padding: 0 10px;
+	margin: 10px 0 5px 0;
+}
+div.modal input.btn {
+	width: auto;
+	height: 35px;
+	border: 1px solid #bebebe;
+	padding: 0 10px;
+	margin: 10px 0;
+}
+
+div.modal label.error {
+	margin-left: 5px;
+}
+
+
+/* Overlay */
+#confirm-overlay {background-color:#333;}
+
+/* Container */
+.modal-content {height:140px; width:420px; font: 16px/22px 'Trebuchet MS', Verdana, Arial; text-align:left; background:#fff; border:2px solid #336699;}
+.modal-content .header {height:30px; line-height:30px; width:100%; color:#fff; font-weight:bold;}
+.modal-content .header span {padding-left:8px;}
+.modal-content .message {color:#333; font-size:14px; margin:0; padding:12px 4px 12px 8px;}
+.modal-content .buttons {line-height:26px; width:160px; float:right; padding:10px 8px 0;} 
+.modal-content .buttons div {float:right; margin-left:4px; width:70px; height:26px; color:#666; font-weight:bold; text-align:center; border:1px solid #bbb; cursor:pointer;} 
+.modal-content a.modal-close,
+.modal-content a.modal-close:link,
+.modal-content a.modal-close:active,
+.modal-content a.modal-close:visited {text-decoration:none; font-weight:bold; position:absolute; right:10px; top:2px; color:#fff;}
+.modal-content a.modal-close:hover {color:#ccc;}
+
+
+/* Marco */
+.permissionTable, .selectAreaTable{
+	vertical-align: middle !important;
+}
+
+.permissionsText input{
+	height: 35px;
+    border: 1px solid #bebebe;
+    padding: 0 10px;
+    vertical-align: bottom;
+}
+
+.permissionsText h3{
+	font-size: 14px;
+	color: #646464;
+}
+
+
+/***
+* Overflow das regras jQuery UI
+*/
+.ui-widget
+{
+	font-family: "titillium" !important;
+	font-size: 15px !important;
+}
+
+
+/*** Tabela ***/
+
+#itens input[type='checkbox'] {
+	opacity: 0;
+	float: left;
+	width: 0;
+	height: 0;
+}
+#itens input[type='checkbox'] + label {
+	/*padding: 5px 0 4px 24px;*/
+	display: inline-block;
+	margin-top: 2px;
+	width: 15px;
+	height: 15px;
+	border: 3px solid #535353;
+	cursor: pointer;
+	background-color: transparent;
+	/*background: url(off.png) left center no-repeat;*/
+}
+#itens input[type='checkbox']:checked + label {
+	/*padding: 5px 0 4px 24px;*/
+	/*cursor: pointer;*/
+	background: #fff url(/PokerWeb/resource/images/check.png) left 2px bottom 3px no-repeat;
+}
+#itens thead tr th {
+	padding: 15px 5px;
+	font-size: 13px;
+	color: #333;
+	background-color: #fbfbfb;
+	border-top: 1px solid #e1e1e1;
+	border-bottom: 1px solid #e1e1e1;
+	cursor: pointer;
+	white-space: nowrap;
+	-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		 -khtml-user-select: none;
+			 -moz-user-select: none;
+				-ms-user-select: none;
+						user-select: none;
+}
+#itens thead tr th.sort-asc,
+#itens thead tr th.sort-desc {
+	background-color: #e5e5e5;
+}
+#itens thead tr th:not(:first-of-type):not(:last-of-type):hover {
+	background-color: #d9d9d9;
+}
+#itens thead tr th:first-of-type,
+#itens thead tr th:last-of-type {
+	cursor: default;
+}
+#itens thead tr th span {
+	display: inline-block;
+	visibility: hidden;
+	width: 6px;
+	height: 6px;
+	background: transparent url(/PokerWeb/resource/images/sort.png) center no-repeat;
+}
+#itens thead tr th.sort-asc span {
+	visibility: visible;
+}
+#itens thead tr th.sort-desc span {
+	visibility: visible;
+	-webkit-transform: rotateX(180deg);
+		 -moz-transform: rotateX(180deg);
+			 -o-transform: rotateX(180deg);
+					transform: rotateX(180deg);
+}
+#itens tbody tr {
+	border-bottom: 1px solid #e1e1e1;
+}
+#itens tbody tr td {
+	padding: 0 5px;
+	font-size: 13px;
+	color: #333;
+	vertical-align: middle;
+	border-bottom: 1px solid #e1e1e1;
+}
+#itens tbody tr td:first-of-type {
+	position: relative;
+	text-align: center;
+	/*border-right: 1px dashed #e1e1e1;*/
+}
+#itens tbody tr td:first-of-type label:after{
+	position: absolute;
+	height: 36px;
+	right: 0;
+	top: 6px;
+	content: "";
+	border-right: 1px dashed #d1d1d1;
+}
+#itens tbody tr td:last-of-type {
+	padding: 0 10px;
+}
+#itens thead tr th:nth-last-of-type(2),
+#itens thead tr th:nth-last-of-type(3),
+#itens tbody tr td:nth-last-of-type(2),
+#itens tbody tr td:nth-last-of-type(3) {
+	text-align: right;
+}
+#itens a {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-repeat: no-repeat;
+	/*background-position: 8px 8px;*/
+	vertical-align: text-bottom;
+}
+
+a.item-log {
+	background-image: url(/PokerWeb/resource/images/item-log.png);
+}
+a.item-pdf {
+	background-image: url(/PokerWeb/resource/images/item-pdf.png);
+}
+a.item-xml {
+	background-image: url(/PokerWeb/resource/images/item-xml.png);
+}
+a.item-mail {
+	background-image: url(/PokerWeb/resource/images/item-mail.png);
+}
+a.item-editar {
+	background-image: url(/PokerWeb/resource/images/tabela-editar.png);
+	height:39px;
+	width:39px;
+	display:block;
+	margin:0 auto;
+}
+a.item-editar:hover {
+	background-image: url(/PokerWeb/resource/images/tabela-editar-on.png);
+	height:39px;
+	width:39px;
+	display:block;	
+}
+a.item-excluir {
+	background-image: url(/PokerWeb/resource/images/tabela-excluir.png);
+}
+a.item-excluir:hover {
+	background-image: url(/PokerWeb/resource/images/tabela-excluir-on.png);
+}
+
+.status-icon {
+	display: inline-block;
+	width: 46px;
+	height: 46px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.status-icon span {
+	display: none;
+}
+.status-aguardando {
+	background-image: url(/PokerWeb/resource/images/status-01.png);
+}
+.status-aprovado-cont {
+	background-image: url(/PokerWeb/resource/images/status-02.png);
+}
+.status-aprovado {
+	background-image: url(/PokerWeb/resource/images/status-03.png);
+}
+.status-rejeitado {
+	background-image: url(/PokerWeb/resource/images/status-04.png);
+}
+.status-obtendo-retorno {
+	background-image: url(/PokerWeb/resource/images/status-05.png);
+}
+.status-enviado {
+	background-image: url(/PokerWeb/resource/images/status-06.png);
+}
+.status-cancelado {
+	background-image: url(/PokerWeb/resource/images/status-07.png);
+}
+.status-erro {
+	background-image: url(/PokerWeb/resource/images/status-08.png);
+}
+.status-denegado {
+	background-image: url(/PokerWeb/resource/images/status-09.png);
+}
+.status-inutilizado {
+	background-image: url(/PokerWeb/resource/images/status-10.png);
+}
+
+
+/* MK */
+
+.mk-msg-ok,
+.mk-msg-nok,
+.mk-msg-alert{background:#e4f7d9;border:1px solid #d4f1bc;padding:10px;float:left;margin:15px 15px 15px 0;color:#666}
+
+.mk-msg-nok{background:#f2dede;border:1px solid #eed3d7;}
+.mk-msg-alert{background:#fffacd;border:1px solid #fffacd;}
+
+.mk-msg-ok h4{color:#55ad3a}
+.mk-msg-nok h4{color:#b94a48}
+.mk-msg-alert h4{color:#ffdead}
+
+
+.ui-wizard-content{background:#f3f3f3 !important}
+
+
+.container{width:initial !important}
+
+.ui-button-text-only .ui-button-text{padding:0;text-shadow:0}
+
+/* FormulÃ¡rio */
+.mk-form{}
+p.mk-bar{color:#ccc;float:left;margin-top:20px;width:100%}
+.mk-form input{min-width:169px;border:1px solid #ccc}
+.mk-form input.columns2{width:563px}
+.mk-form select{min-width:179px;height:31px;border:1px solid #ccc}
+h3{font-size:1.10em}
+.mk-form .mk-cel{float:left;margin-right:15px;padding-top:20px}
+.mk-form .mk-cel h3{font-family:'titillium';font-size:1.10em;color:#000}
+.mk-form .mk-cel.ajuste-cidade{position:relative;top:20px}
+.no-float{float:none !important;/* margin-top:7px */}
+.ui-corner-all{border-radius:0 !important}
+.itens input[type='checkbox'] + label {/* padding: 5px 0 4px 24px; */display: inline-block;margin-top: 2px;width: 15px;height: 15px;border: 3px solid #535353;cursor: pointer;background-color: transparent;}
+.itens input[type='checkbox']:checked + label {background: #fff url(/PokerWeb/resource/images/check.png) left 2px bottom 3px no-repeat;}
+.itens input[type='checkbox'] {opacity: 0;float: left;width: 0;height: 0;}
+
+
+/* Tabela */
+form#nfceListForm{width:100%}
+form#repositorioListForm{width:100%}
+form#manifestListForm{width:100%}
+.ui-datatable table{border-top: 1px solid #ccc;border-left: 1px solid #ccc;border-right: 1px solid #ccc;font-size:12px;} /*table-layout: auto !important;*/
+/*.ui-datatable table, .ui-datatable-resizable table {table-layout: auto !important;}*/
+.ui-datatable table tr{background:#fff;border:1px solid #ccc}
+.ui-datatable .ui-paginator, .ui-datatable .ui-paginator{padding:5px !important;background:#fff}
+.ui-datatable thead th, .ui-datatable tbody td, .ui-datatable tfoot td{vertical-align:middle;text-align:center;overflow:visible;border-width:0}
+.icone{width:39px;height:39px;display:inherit}
+.icone-32{width:32px;height:32px;display:inherit}
+.ui-datatable tr.ui-state-highlight{background:#efefef;border-width:0;text-shadow:0 0 0}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{background:#efefef !important;border:1px solid #ccc !important}
+.ui-datatable ui-datatable-sticky ui-widget ui-shadow ui-sticky {
+display: none !important;
+height: 0px;
+}
+
+ /* Modal */
+/*  .ui-widget-header{background:#000 !important} */
+ .ui-dialog .ui-widget-header{background:#000 -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.8)), to(rgba(255,255,255,0))) !important}
+ .ui-dialog .ui-panelgrid tr{border:0}
+ .ui-dialog .ui-panelgrid td{border-left:0;border-right:0;border-bottom:0;padding:0;border:0;text-align:left}
+ .ui-dialog .ui-panelgrid tr tr td{padding:10px 0}
+ /* .ui-dialog .ui-widget-content{border:0 !important} */
+ .ui-widget-header .ui-icon{background-image:url(/PokerWeb/resource/images/ui-icons_898989_256x240.png) !important}
+ .ui-growl{}
+ .ui-growl-item-container{background:#aaaaaa -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.25)), to(rgba(0,0,0,0))) !important;border:1px solid #666 !important}
+ .ui-growl .ui-shadow{box-shadow:0px 5px 10px rgba(0,0,0,0.8)}
+ .ui-growl .ui-corner-all{border-radius:3px !important}
+ 
+ .ui-growl .ui-state-highlight{
+border: 1px solid #666666;
+background: #aaaaaa;
+background: #aaaaaa linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0));
+background: #aaaaaa -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.25)), to(rgba(0,0,0,0)));
+background: #aaaaaa -moz-linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0));
+color: #ffffff;
+text-shadow: 1px 1px 1px #333333;
+}
+ 
+ 
+.configureDiv{}
+.configureDiv input{margin-bottom:7px;padding:6px}
+.configureDiv .ui-chkbox-box
+.configureDiv .ui-state-default,
+.configureDiv .ui-widget-content .ui-state-default,
+.configureDiv .ui-widget-header .ui-state-default{border:1px solid #ccc !important}
+.configureDiv .ui-widget-content{background:#efefef !important}
+.configureDiv .btn.color-yellow{margin-top:13px;background: transparent;background-color: #f2cc23;border: 0 !important}
+.configureDiv .ui-widget-header{background:transparent !important}
+
+/*  */
+/* .ui-widget-header{background:#000 -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.8)), to(rgba(255,255,255,0))) !important} */
+.ui-fileupload-buttonbar.ui-widget-header{background:transparent !important}
+
+
+/* Accordion  */
+.ui-accordion-content{background:#f3f3f3 !important;border:0 !important}
+.ui-accordion-content div,
+.ui-accordion-content div div{background:#f9f9f9 !important}
+.page-nota .body .content-tabs h4{font-size:15px;font-weight:bold}
+.page-nota .body .content-tabs {margin-top: -1px;overflow: hidden;padding: 20px;background: #f3f3f3;border-top: 1px solid #e1e1e1;}
+
+
+ui-fileupload{margin-top:10px}
+
+.ui-growl{position:fixed !important;left:50%;margin-left:-150px;top:20%}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{color:#4f4f4f !important;/* border:0 !important */}
+
+/* #nav-tabs{margin-left:2px} */
+
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited{color:#000 !important}
+
+
+ 
+
+ .logoEmpresa{
+ 	  max-width: 200px;
+  	  height: auto;
+ }
+ 
+ .no-background > div {
+ 	background-color: white;
+ 	background-image: none; 
+ } 
+ 

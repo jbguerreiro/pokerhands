@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14410432198170" configfile="/PokerWeb/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="562" id="pf14410498521721" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf144104985217327" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="messages/messages.xhtml" x="338" y="946" id="pf144104985217556" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" inlinks="pf144104985217327" path="/messages/messages.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="login.xhtml" x="122" y="1906" id="pf144104985217557" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" outlinks="pf144104985217558" inlinks="pf144104985217558" path="/main.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="firstaccess/firstaccess.xhtml" x="122" y="2674" id="pf144104985217560" referenceLink="//@navigationRule.1/@navigationCase.1/@toViewId|" path="/firstaccess/firstaccess.xhtml"/>
+  <links id="pf144104985217327" target="pf144104985217556" source="pf14410498521721" outcome="messages" redirect="true"/>
+  <links id="pf144104985217558" target="pf144104985217557" source="pf144104985217557" outcome="main">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+</pageflow:Pageflow>
