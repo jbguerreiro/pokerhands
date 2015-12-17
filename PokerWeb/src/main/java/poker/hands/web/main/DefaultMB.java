@@ -1,7 +1,6 @@
 package poker.hands.web.main;
 
 import java.io.Serializable;
-import java.util.Map;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -25,9 +24,6 @@ public class DefaultMB implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private Map<Short, Short> map_p1;
-	private Map<Short, Short> map_p2;
-
 	private String username_p1;
 	private String username_p2;
 
@@ -43,22 +39,13 @@ public class DefaultMB implements Serializable {
 		Mesa mesa = new Mesa();
 
 		if (p1 == null) {
-			p1 = mesa.procuraDaMesa(cards_p1);
+			p1 = mesa.stringToCarta(cards_p1);
 		}
 		if (p2 == null) {
-			p2 = mesa.procuraDaMesa(cards_p2);
+			p2 = mesa.stringToCarta(cards_p2);
 		}
 		Mao mao_p1 = new Mao(p1);
 		Mao mao_p2 = new Mao(p2);
-
-		//
-		// mao_p1.display();
-		//
-		// mao_p1.displayAll();
-		//
-		// mao_p2.display();
-		//
-		// mao_p2.displayAll();
 
 		short retorno = mao_p1.compareTo(mao_p2);
 
@@ -112,10 +99,6 @@ public class DefaultMB implements Serializable {
 			count++;
 		}
 		return cartas;
-
-	}
-
-	private void nula() {
 
 	}
 

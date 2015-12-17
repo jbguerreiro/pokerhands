@@ -49,7 +49,7 @@ public class Mesa {
 
 	}
 
-	public Carta[] procuraDaMesa(String cartasMao) {
+	public Carta[] stringToCarta(String cartasMao) {
 
 		String[] cartaMao = cartasMao.split(" ");
 		Carta[] cartaRetorno = new Carta[5];

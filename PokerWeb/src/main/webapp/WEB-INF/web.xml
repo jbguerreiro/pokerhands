@@ -43,14 +43,6 @@
 		<param-value>true</param-value>
 	</context-param>
 
-	<login-config>
-		<auth-method>FORM</auth-method>
-		<form-login-config>
-			<form-login-page>/login.xhtml</form-login-page>
-			<form-error-page>/pages/error.xhtml</form-error-page>
-		</form-login-config>
-	</login-config>
-
 
 	<filter>
 		<filter-name>PrimeFaces FileUpload Filter</filter-name>
