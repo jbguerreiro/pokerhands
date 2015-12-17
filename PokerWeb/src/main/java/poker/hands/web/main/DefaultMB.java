@@ -9,8 +9,6 @@ import javax.faces.context.FacesContext;
 
 import org.apache.commons.lang.StringUtils;
 
-import lombok.Data;
-import lombok.extern.log4j.Log4j;
 import poker.hands.service.model.Carta;
 import poker.hands.service.model.Mao;
 import poker.hands.service.model.Mesa;
@@ -18,8 +16,6 @@ import poker.hands.service.util.LanguageUtil;
 
 @SessionScoped
 @ManagedBean(name = "defaultMB")
-@Log4j
-@Data
 public class DefaultMB implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -51,18 +47,29 @@ public class DefaultMB implements Serializable {
 
 		switch (retorno) {
 		case 0:
-			msg = new FacesMessage(LanguageUtil.getDescriptionProperties("default.result"),
+			msg = new FacesMessage(
+					LanguageUtil.getDescriptionProperties("default.result"),
 					LanguageUtil.getDescriptionProperties("default.tie"));
 			break;
 
 		case 1:
-			msg = new FacesMessage(LanguageUtil.getDescriptionProperties("default.result"),
-					username_p1 + " " + LanguageUtil.getDescriptionProperties("default.win") + " " + mao_p1.display());
+			msg = new FacesMessage(
+					LanguageUtil.getDescriptionProperties("default.result"),
+					username_p1
+							+ " "
+							+ LanguageUtil
+									.getDescriptionProperties("default.win")
+							+ " " + mao_p1.display());
 			break;
 
 		case 2:
-			msg = new FacesMessage(LanguageUtil.getDescriptionProperties("default.result"),
-					username_p2 + " " + LanguageUtil.getDescriptionProperties("default.win") + " " + mao_p2.display());
+			msg = new FacesMessage(
+					LanguageUtil.getDescriptionProperties("default.result"),
+					username_p2
+							+ " "
+							+ LanguageUtil
+									.getDescriptionProperties("default.win")
+							+ " " + mao_p2.display());
 			break;
 
 		}
@@ -82,7 +89,7 @@ public class DefaultMB implements Serializable {
 		cards_p1 = StringUtils.join(p1, " ");
 		cards_p2 = StringUtils.join(p2, " ");
 
-		log.debug("OK");
+		// log.debug("OK");
 
 		return "main";
 	}
@@ -100,6 +107,58 @@ public class DefaultMB implements Serializable {
 		}
 		return cartas;
 
+	}
+
+	public String getUsername_p1() {
+		return username_p1;
+	}
+
+	public void setUsername_p1(String username_p1) {
+		this.username_p1 = username_p1;
+	}
+
+	public String getUsername_p2() {
+		return username_p2;
+	}
+
+	public void setUsername_p2(String username_p2) {
+		this.username_p2 = username_p2;
+	}
+
+	public String getCards_p1() {
+		return cards_p1;
+	}
+
+	public void setCards_p1(String cards_p1) {
+		this.cards_p1 = cards_p1;
+	}
+
+	public String getCards_p2() {
+		return cards_p2;
+	}
+
+	public void setCards_p2(String cards_p2) {
+		this.cards_p2 = cards_p2;
+	}
+
+	public Carta[] getP1() {
+		return p1;
+	}
+
+	public void setP1(Carta[] p1) {
+		this.p1 = p1;
+	}
+
+	public Carta[] getP2() {
+		return p2;
+	}
+
+	public void setP2(Carta[] p2) {
+		this.p2 = p2;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 }

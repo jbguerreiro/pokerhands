@@ -17,7 +17,7 @@ import poker.hands.service.bean.PokerResponse;
 
 @Component
 @Path("/{poker:[pP][oO][kK][eE][rR]}")
-@Log4j
+
 public class PokerWebService {
 
 	@POST
@@ -29,7 +29,7 @@ public class PokerWebService {
 		PokerResponse pokerResponse = new PokerResponse();
 
 		pokerResponse.setMainMessage(pokerRequest.getCartas_p1());
-		log.info("Em desenvolvimento");
+		//log.info("Em desenvolvimento");
 		return pokerResponse;
 	}
 }

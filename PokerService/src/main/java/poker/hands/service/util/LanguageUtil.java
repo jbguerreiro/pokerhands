@@ -5,9 +5,6 @@ import java.io.InputStream;
 import java.util.MissingResourceException;
 import java.util.Properties;
 
-import lombok.extern.log4j.Log4j;
-
-@Log4j
 public class LanguageUtil {
 
 	// private static final String EN_DESCRIPTION_PROPERTIES=
@@ -22,14 +19,16 @@ public class LanguageUtil {
 		return instance;
 	}
 
-	public static String getDescriptionProperties(String resourceBundleKey) throws MissingResourceException {
+	public static String getDescriptionProperties(String resourceBundleKey)
+			throws MissingResourceException {
 		Properties properties = new Properties();
 		try {
-			InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream(resourceBundleName);
+			InputStream is = Thread.currentThread().getContextClassLoader()
+					.getResourceAsStream(resourceBundleName);
 			properties.load(is);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			log.error(e);
+			// log.error(e);
 		}
 		return (String) properties.get(resourceBundleKey);
 	}
@@ -50,5 +49,21 @@ public class LanguageUtil {
 		} else {
 			resourceBundleName = "description_pt_BR.properties";
 		}
+	}
+
+	public static String getResourceBundleName() {
+		return resourceBundleName;
+	}
+
+	public static void setResourceBundleName(String resourceBundleName) {
+		LanguageUtil.resourceBundleName = resourceBundleName;
+	}
+
+	public static LanguageUtil getInstance() {
+		return instance;
+	}
+
+	public static void setInstance(LanguageUtil instance) {
+		LanguageUtil.instance = instance;
 	}
 }

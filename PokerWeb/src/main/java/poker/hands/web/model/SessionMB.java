@@ -6,12 +6,10 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
 
-import lombok.Data;
 import poker.hands.web.main.DefaultMB;
 
 @SessionScoped
 @ManagedBean(name = "sessionMB")
-@Data
 public class SessionMB implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -41,6 +39,14 @@ public class SessionMB implements Serializable {
 		 * Locale("pt", "BR")); }
 		 */
 		this.getLocale();
+	}
+
+	public String getLocale() {
+		return locale;
+	}
+
+	public void setLocale(String locale) {
+		this.locale = locale;
 	}
 
 }

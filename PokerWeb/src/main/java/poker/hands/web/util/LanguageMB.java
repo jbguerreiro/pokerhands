@@ -30,8 +30,10 @@ public class LanguageMB implements Serializable {
 		LanguageUtil.getInstance("pt_BR");
 
 		countries = new LinkedHashMap<String, Object>();
-		countries.put(LanguageUtil.getDescriptionProperties("default.portuguese"), new Locale("pt_BR"));
-		countries.put(LanguageUtil.getDescriptionProperties("default.english"), new Locale("en"));
+		countries.put(LanguageUtil.getDescriptionProperties("pt_BR"),
+				new Locale("pt_BR"));
+		countries.put(LanguageUtil.getDescriptionProperties("en"), new Locale(
+				"en"));
 	}
 
 	public Map<String, Object> getCountriesInMap() {
@@ -44,8 +46,25 @@ public class LanguageMB implements Serializable {
 		// loop country map to compare the locale code
 		for (Map.Entry<String, Object> entry : countries.entrySet()) {
 			if (entry.getValue().toString().equals(newLocaleValue)) {
-				FacesContext.getCurrentInstance().getViewRoot().setLocale((Locale) entry.getValue());
+				FacesContext.getCurrentInstance().getViewRoot()
+						.setLocale((Locale) entry.getValue());
 			}
 		}
+	}
+
+	public String getLanguage() {
+		return language;
+	}
+
+	public void setLanguage(String language) {
+		this.language = language;
+	}
+
+	public static Map<String, Object> getCountries() {
+		return countries;
+	}
+
+	public static void setCountries(Map<String, Object> countries) {
+		LanguageMB.countries = countries;
 	}
 }
